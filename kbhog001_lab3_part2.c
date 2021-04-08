@@ -19,13 +19,16 @@ int main(void) {
 	DDRC = 0xFF; PORTC = 0x00;	
 	unsigned char tmpA = 0x00;
 	unsigned char tmpC = 0x00;	
-	unsigned int i;
+
 
     /* Insert your solution below */
     while (1) {
 	tmpA = PINA & 0x0F;
 	
-	if ( tmpA <= 2 ){
+	if (tmpA == 0){
+		tmpC = 0x40
+	}
+	else if ( tmpA <= 2 ){
 		tmpC = 0x60;
 	}
 	else if (tmpA <= 4 ){
