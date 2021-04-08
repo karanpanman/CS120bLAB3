@@ -25,7 +25,7 @@ int main(void) {
     while (1) {
 	tmpA = PINA;
 	check = 0;
-	if ( (tmpA & 0x30) == 0x30 ){
+	if ( (tmpA & 0x70) == 0x30 ){
 		check = 1;
 	}
 	tmpA = tmpA & 0x0F;
