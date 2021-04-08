@@ -19,14 +19,14 @@ int main(void) {
 	DDRC = 0xFF; PORTC = 0x00;	
 	unsigned char tmpA = 0x00;
 	unsigned char tmpC = 0x00;	
-	bool check = 0;
+	bool check = false;
 
     /* Insert your solution below */
     while (1) {
 	tmpA = PINA;
-	check = 0;
+	check = false;
 	if ( (tmpA & 0x30) == 0x30 ){
-		check = 1;
+		check = true;
 	}
 	tmpA = tmpA & 0x0F;
 
