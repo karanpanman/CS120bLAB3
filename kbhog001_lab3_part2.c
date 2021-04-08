@@ -26,7 +26,7 @@ int main(void) {
 	tmpA = PINA & 0x0F;
 	
 	if (tmpA == 0){
-		tmpC = 0x40
+		tmpC = 0x40;
 	}
 	else if ( tmpA <= 2 ){
 		tmpC = 0x60;
