@@ -26,8 +26,11 @@ int main(void) {
 	tmpB = 0x000;
 
 	tmpD = tmpD | PINB;
-	
-	if ( tmpD >= 70){
+	tmpD = tmpD << 1;
+	if ( (PIND & 0x080) == 0x080){
+		tmpB = tmpB | 0x002;
+	}
+	else if ( tmpD >= 70){
 		tmpB = tmpB | 0x002;
 	}
 	else if (tmpD > 5){
