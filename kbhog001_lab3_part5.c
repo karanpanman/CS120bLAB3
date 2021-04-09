@@ -24,9 +24,9 @@ int main(void) {
     while (1) {
 	tmpD = PIND;
 	tmpB = 0x000;
-
-	tmpD = tmpD | PINB;
 	tmpD = tmpD << 1;
+	tmpD = tmpD | PINB;
+
 	if ( (PIND & 0x080) == 0x080){
 		tmpB = tmpB | 0x002;
 	}
