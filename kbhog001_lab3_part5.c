@@ -24,7 +24,7 @@ int main(void) {
     while (1) {
 	tmpD = PIND;
 	tmpB = 0x000;
- 	tmpD = tmpD << 1;
+
 	tmpD = tmpD | PINB;
 	
 	if ( tmpD >= 70){
